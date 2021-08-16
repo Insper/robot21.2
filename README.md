@@ -4,6 +4,7 @@
 [Aula 1 - Imagens e modelos de cores](./aula01)
 
 
+
 ## Projetos antigos
 
 [Projeto de 2021.1](https://youtube.com/playlist?list=PLVU3UhXa4-X-qIlNL6NVvIizOXXJkkkU1) 
@@ -23,7 +24,7 @@ Projeto de 2020.1
 
 ## APS 
 
-APS 1 - Cores e matrizes do Numpy: TBD
+[APS 1 - Cores e matrizes do Numpy](./aula01/APS01_enunciados.ipynb)
 
 APS 2 - HSV e contornos: TBD
 
