@@ -1,3 +1,8 @@
+# Github - [acesso via PAT](https://docs.github.com/pt/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+Usar o PAT no lugar da senha quando autenticar pelo git na linha de comando.
+
+
 # Robótica Computacional 2021 2.o semestre
 
 
