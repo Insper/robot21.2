@@ -28,12 +28,12 @@ if __name__ == "__main__":
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Faz o processamento
-    saida = equaliza(img)
+    saida = equaliza(gray)
     cv2.imwrite("saida_ex1.png", saida)
 
 
-    # NOTE que a OpenCV terminal trabalha com BGR
-    cv2.imshow('entrada', img)
+    # NOTE que a OpenCV terminal trabalha com BGR ou com GRAY
+    cv2.imshow('entrada', gray)
 
     cv2.imshow('saida', saida)
 
