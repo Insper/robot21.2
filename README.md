@@ -8,6 +8,9 @@ Usar o PAT no lugar da senha quando autenticar pelo git na linha de comando.
 
 [Aula 1 - Imagens e modelos de cores](./aula01)
 
+[Aula 2 - Segmentação colorida e contornos](./aula02)
+
+[Aula 3 - Identificação de retas e círculos](./aula03)
 
 
 ## Projetos antigos
@@ -29,11 +32,11 @@ Projeto de 2020.1
 
 ## APS 
 
-[APS 1 - Cores e matrizes do Numpy](./aula01/APS01_enunciados.ipynb)
+[APS 1 - Cores e matrizes do Numpy](./aula01/APS01/APS01_enunciados.ipynb)
 
-APS 2 - HSV e contornos: TBD
+[APS 2 - HSV e contornos](./aula02/APS02/Atividade2.ipynb)
 
-APS 3 - TBD
+[APS 3 - Identificação de retas](./aula03/APS03/APS03_enunciado.ipynb)
 
 APS 4 - TBD
 
