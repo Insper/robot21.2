@@ -85,7 +85,11 @@ APS 4 - TBD
 
 [Como instalar o GIT LFS](./guides/git_lfs.md)
 
+## Anaconda
+
 [Como instalar OpenCV 4.1 no Anaconda - Mac e Windows](./guides/opencv_anaconda.md)
+
+## Linux
 
 [Arquivo de swap - aumentar memória disponível no Linux](./guides/swap.md)
 
