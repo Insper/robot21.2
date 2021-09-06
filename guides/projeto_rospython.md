@@ -7,7 +7,7 @@ Fontes:
 [ROS Robot Programming Capítulo 7](http://community.robotsource.org/t/download-the-ros-robot-programming-book-for-free/51)
 
 
-Você deve trabalhar sempre num *workspace catkin ROS*.  Por enquanto encorajamos fortemente  trabalhar sempre no `/home/usuario/catkin_ws` . Se você usa a instalação *default* vai ser então `\home\borg\catkin_ws`.
+Você deve trabalhar sempre num *workspace catkin ROS*.  Por enquanto encorajamos fortemente  trabalhar sempre no `/home/usuario/catkin_ws` . Se você usa a instalação *default* vai ser então `/home/borg/catkin_ws`.
 
 Em Unix em geral o caracter `~` sempre aponta para o diretório atual. Portanto trabalharemos no `~/catkin_ws/src`
 
@@ -15,7 +15,6 @@ Em Unix em geral o caracter `~` sempre aponta para o diretório atual. Portanto 
 Abra o terminal com `Ctrl` `Alt` `T`
 
     cd ~/catkin_ws/src
-
 
     catkin_create_pkg meu_projeto std_msgs sensor_msgs geometry_msgs rospy roscpp
 
@@ -44,10 +43,10 @@ Agora vamos torná-lo executável:
 
     chmod a+x roda.py
 
-Em seguida vamos editá-lo. Sugirmos usar o `subl`, que precisa ser instalado caso não exista:
+Em seguida vamos editá-lo.
 
     sudo snap install --classic sublime-text
-    subl roda.py
+    code roda.py
 
 Dentro do editor cole o seguinte código para o `roda.py:
 
@@ -58,8 +57,8 @@ Dentro do editor cole o seguinte código para o `roda.py:
 import rospy
 from geometry_msgs.msg import Twist, Vector3
 
-v = 10  # Velocidade linear
-w = 5  # Velocidade angular
+v = 0.1  # Velocidade linear
+w = 0.5  # Velocidade angular
 
 if __name__ == "__main__":
     rospy.init_node("roda_exemplo")
@@ -84,7 +83,7 @@ Para compilar:
 
 ### Execução:
 
-Para executar, é muito importante que você esteja ou (a) [com o simulador aberto](simulador_ros.md) ou (b) com o robô real conectado.
+Para executar, é muito importante que você esteja ou (a) [com o simulador aberto](simulador_ros.md) ou (b) com o robô real conectado -- de preferência no **chão**.
 
 Digite **num terminal novo**, criado depois de ter rodado o `catkin_make` acima:
 
@@ -106,7 +105,7 @@ Vamos criar mais um código
 
 Vamos editar:
 
-	subl le_scan.py
+	code le_scan.py
 
 Digite o código abaixo:
 
@@ -161,7 +160,7 @@ Para conseguir executar, abra **um novo terminal** e digite:
 
 
 
-**Atenção** se você tiver Anaconda em seu Linux, pode ser que tenha vários *python3* e o *ROS* e *OpenCV* estejam instalados somente em alguns deles.
+**Atenção** se você tiver Anaconda em seu Linux, pode ser que tenha vários *python3* e o *ROS* e *OpenCV* estejam instalados somente em alguns deles. A sugestão é não usar Anaconda no Linux.
 
 
 

@@ -5,6 +5,17 @@ Referência: Livro [ROS Robot Programming (disponível em PDFs)](http://communit
 
 Abra um terminal. Dica: `Ctrl` `Alt` `T` abre terminais no Ubuntu
 
+## IMPORTANTE: atualizar a chave do repositório
+
+Independentemente se o seu Ubuntu foi fornecido pelo laboratório, você **deve** executar os comandos abaixo
+
+    sudo apt install curl # if you haven't already installed curl
+    curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
+Sempre faça isto antes de instalar novos pacotes do ubuntu:
+
+    sudo apt update
+
 
 ## Se você não usa o Linux fornecido pelo laboratório, faça as etapas a seguir
 
@@ -15,11 +26,11 @@ Vamos os certificar de que temos alguns softwares essenciais para o Turtlebot 3:
 
 Vamos nos certificar de que já temos os softwares do `Turtlebot` (só precisa ser feito uma vez):
 
+    mkdir -p ~/catkin_ws/src
     cd ~/catkin_ws/src
     git clone https://github.com/ros-teleop/teleop_twist_keyboard.git    
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_applications.git  
-
 
     cd ~/catkin_ws
     catkin_make
