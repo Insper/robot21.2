@@ -45,7 +45,6 @@ Agora vamos torná-lo executável:
 
 Em seguida vamos editá-lo.
 
-    sudo snap install --classic sublime-text
     code roda.py
 
 Dentro do editor cole o seguinte código para o `roda.py:
@@ -57,7 +56,7 @@ Dentro do editor cole o seguinte código para o `roda.py:
 import rospy
 from geometry_msgs.msg import Twist, Vector3
 
-v = 0.1  # Velocidade linear
+v = 0.2  # Velocidade linear
 w = 0.5  # Velocidade angular
 
 if __name__ == "__main__":
