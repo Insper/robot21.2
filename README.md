@@ -12,6 +12,8 @@ Usar o PAT no lugar da senha quando autenticar pelo git na linha de comando.
 
 [Aula 3 - Identificação de retas e círculos](./aula03)
 
+[Aula 4 - Detecção de objetos](./aula04)
+
 
 ## Projetos antigos
 
@@ -87,7 +89,7 @@ APS 4 - TBD
 
 ## Anaconda
 
-[Como instalar OpenCV 4.1 no Anaconda - Mac e Windows](./guides/opencv_anaconda.md)
+[Como instalar bibliotecas no Anaconda - Mac e Windows](./guides/opencv_anaconda.md)
 
 ## Linux
 
