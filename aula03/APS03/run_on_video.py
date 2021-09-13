@@ -8,7 +8,7 @@ import biblioteca
 print("Baixe o arquivo a seguir para funcionar: ")
 print("https://github.com/Insper/robot202/raw/master/projeto/centro_massa/video.mp4")
 
-cap = cv2.VideoCapture('video.mp4')
+cap = cv2.VideoCapture('yellow.mp4')
 
 while(True):
     # Capture frame-by-frame
