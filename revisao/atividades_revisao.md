@@ -5,101 +5,15 @@ Lembre-se de que também existem [as provas e simulados anteriores](./lista_prov
 
 
 
+# 0. Revisão de ROS feita para a P1 do semestre passado
 
+[Código do simulado da prova](https://github.com/insper-classroom/211_robot_sim)
 
+[Gabarito do simulado](https://github.com/insper-classroom/211_robot_sim)
 
+[Aula de terça](https://web.microsoftstream.com/video/451bee6e-ad81-456a-b338-28c5895e0e80)
 
-## P1 de 2020.2
-
-[https://github.com/Insper-classroom/202_robot_p1](https://github.com/Insper-classroom/202_robot_p1)
-
-
-[Gabarito](https://github.com/Insper-classroom/202_robot_p1/tree/solution)
-
-
-
-## P2 de 2020.2
-
-[https://github.com/Insper-classroom/202_robot_p2](https://github.com/Insper-classroom/202_robot_p2)
-
-
-Ainda sem gabarito
-
-## Sub de 2020.2 
-
-[https://github.com/Insper-classroom/202_robot_sub](https://github.com/Insper-classroom/202_robot_sub)
-
-Ainda sem gabarito
-
-## Delta de 2020.2
-
-[https://github.com/Insper-classroom/202_robot_delta](https://github.com/Insper-classroom/202_robot_delta)
-
-Ainda sem gabarito
-
-
-
-
-
-
-
-
-## Simulado de 2020.2
-
-Questões
-[https://github.com/insper-classroom/20b_rob_sim](https://github.com/insper-classroom/20b_rob_sim)
-
-Solução:
-[https://github.com/insper-classroom/20b_rob_sim/tree/solution](https://github.com/insper-classroom/20b_rob_sim/tree/solution)
-
-[Vídeo da solução da Q1 - alunos Insper](https://web.microsoftstream.com/video/dad549e6-cb96-4e59-bd80-151ed9fdf126)
-
-[Vídeo da solução da Q2 - alunos Insper](https://web.microsoftstream.com/video/71470ed4-cca7-4f77-beec-32043230f48b)
-
-
-
-# P1 de 2020
-
-Resolução do exercício 3 - ROS
-
-[https://web.microsoftstream.com/video/0653fc1d-f6de-400f-b706-f86c72fe76e4](https://web.microsoftstream.com/video/0653fc1d-f6de-400f-b706-f86c72fe76e4)
-
-
-
-# SUB de 2020
-
-Resolução da Q1 - OpenCV
-
-[https://web.microsoftstream.com/video/157cc69f-8814-4af7-94f6-7b660d70d8dd](https://web.microsoftstream.com/video/157cc69f-8814-4af7-94f6-7b660d70d8dd)
-
-Resolução da Q2 - OpenCV
-
-[https://web.microsoftstream.com/video/d19d7e3e-e833-4ad9-a927-b703817fa39f](https://web.microsoftstream.com/video/d19d7e3e-e833-4ad9-a927-b703817fa39f)
-
-Atenção: a solução destas questões está neste [link](https://github.com/Insper/20_sub_rob/tree/gabarito)
-
-
-# Discussão da P2  de 2020
-
-[Discussão feita em aula https://web.microsoftstream.com/video/f039d50f-3f6b-4e01-b45c-f2bffd2cbd84](https://web.microsoftstream.com/video/f039d50f-3f6b-4e01-b45c-f2bffd2cbd84)
-
-Código da solução 
-[https://github.com/mirwox/p2/tree/solution](https://github.com/mirwox/p2/tree/solution)
-
-Foi rediscutido no 2.o semestre de 2020:
-[https://web.microsoftstream.com/video/13b75063-0cf7-488d-8b38-3cbc51246ed8?list=studio](https://web.microsoftstream.com/video/13b75063-0cf7-488d-8b38-3cbc51246ed8?list=studio)
-
-Código em:
-[https://github.com/mirwox/p2/blob/revisao20202/p2_20/scripts/Q3_controle.py](https://github.com/mirwox/p2/blob/revisao20202/p2_20/scripts/Q3_controle.py)
-
-
-
-
-
-# 0. Revisão de ROS feita para a P1 
-
-
-[https://web.microsoftstream.com/video/8fcbb9d9-8cfd-43d5-b749-44103ed85b5a](https://web.microsoftstream.com/video/8fcbb9d9-8cfd-43d5-b749-44103ed85b5a)
+[Aula de quinta](https://web.microsoftstream.com/video/e734cfa2-2a79-41bb-a265-f260673cbc8e)
 
 
 # 1. Revisão de OpenCV 
