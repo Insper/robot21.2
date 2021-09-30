@@ -4,8 +4,19 @@
 Lembre-se de que também existem [as provas e simulados anteriores](./lista_provas_anteriores.md).
 
 
+# 1. Simulação da prova 
 
-# 0. Revisão de ROS feita para a P1 do semestre passado
+[Código do simulado da prova](https://github.com/insper-classroom/212_robot_sim)
+
+[Gabarito do simulado](https://github.com/Insper-classroom/212_robot_sim/tree/gabarito)
+
+[Resolução da questão 1 (OpenCV) na aula de segunda](https://alinsperedu.sharepoint.com/sites/Section_202162.GRENGCOM_201561_0021.ROBCOMP_3ENGCOMA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSection%5F202162%2EGRENGCOM%5F201561%5F0021%2EROBCOMP%5F3ENGCOMA%2FShared%20Documents%2FGeneral%2FRecordings%2FNova%20reuni%C3%A3o%2D20210927%5F161428%2DMeeting%20Recording%2Emp4&parent=%2Fsites%2FSection%5F202162%2EGRENGCOM%5F201561%5F0021%2EROBCOMP%5F3ENGCOMA%2FShared%20Documents%2FGeneral%2FRecordings)
+
+[Resolução da questão 2 (ROS + OpenCV) na aula de terça](https://alinsperedu.sharepoint.com/sites/Section_202162.GRENGCOM_201561_0021.ROBCOMP_3ENGCOMA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSection%5F202162%2EGRENGCOM%5F201561%5F0021%2EROBCOMP%5F3ENGCOMA%2FShared%20Documents%2FGeneral%2FRecordings%2FTer%C3%A7a%20%2D%20corre%C3%A7%C3%A3o%20do%20simulado%2D20210928%5F155119%2DMeeting%20Recording%2Emp4&parent=%2Fsites%2FSection%5F202162%2EGRENGCOM%5F201561%5F0021%2EROBCOMP%5F3ENGCOMA%2FShared%20Documents%2FGeneral%2FRecordings)
+
+
+
+# 2. Revisão de ROS feita para a P1 do semestre passado
 
 [Código do simulado da prova](https://github.com/insper-classroom/211_robot_sim)
 
@@ -16,7 +27,7 @@ Lembre-se de que também existem [as provas e simulados anteriores](./lista_prov
 [Aula de quinta](https://web.microsoftstream.com/video/e734cfa2-2a79-41bb-a265-f260673cbc8e)
 
 
-# 1. Revisão de OpenCV 
+# 3. Revisão de OpenCV 
 
 [Vídeo da revisão](https://web.microsoftstream.com/video/0f2663ed-7258-42f5-8d9b-6db04ba55431)
 
@@ -25,7 +36,7 @@ Lembre-se de que também existem [as provas e simulados anteriores](./lista_prov
 
 
 
-# 2. Revisão de ROS
+# 4. Revisão de ROS
 
 
 Enunciado:
@@ -38,7 +49,7 @@ Enunciado:
 [https://web.microsoftstream.com/video/2f7b8fec-add8-4300-b902-2daf40fd4676?list=studio](https://web.microsoftstream.com/video/2f7b8fec-add8-4300-b902-2daf40fd4676)
 
 
-## 2.1 Questão de Twist e Odometria
+## 4.1 Questão de Twist e Odometria
 
 Faça um programa em ROS que realize as seguintes tarefas:
 
@@ -58,7 +69,7 @@ Faça um programa em ROS que realize as seguintes tarefas:
 | Para após andar | 2.5 | 
 
 
-## 2.2 Resposta da Q3 
+## 4.2 Resposta da Q3 
 
 
 
@@ -175,8 +186,6 @@ if __name__=="__main__":
         sys.exit(0)
 
 ```
-
-
 
 
 

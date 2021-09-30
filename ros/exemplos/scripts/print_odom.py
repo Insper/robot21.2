@@ -46,8 +46,8 @@ if __name__=="__main__":
 
     try:
         while not rospy.is_shutdown():
-            velocidade = Twist(Vector3(0, 0, 0), Vector3(0, 0, 0))
-            velocidade_saida.publish(velocidade)
+#            velocidade = Twist(Vector3(0, 0, 0), Vector3(0, 0, 0))
+#            velocidade_saida.publish(velocidade)
             print("x {} y {} z {}".format(x, y, z))
             rospy.sleep(2)
     except rospy.ROSInterruptException:
