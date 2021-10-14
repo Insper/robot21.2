@@ -41,11 +41,16 @@ class Follower:
         self.twist = Twist()
         self.laser_msg = LaserScan()
         
+        self.cx = -1
+        self.cy = -1
+        self.h = -1
+        self.w = -1
+
         self.lastError = 0
         self.max_vel_linear = 0.2
         self.max_vel_angular = 2.0
-        self.herts = 250
-        self.rate = rospy.Rate(self.herts)
+        self.hertz = 250
+        self.rate = rospy.Rate(self.hertz)
 
     def laser_callback(self, msg):
         self.laser_msg = msg
@@ -63,51 +68,46 @@ class Follower:
             mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 
             h, w, d = cv_image.shape
-            search_top = 3*h/4
-            search_bot = 3*h/4 + 20
+            search_top = 3*h//4
+            search_bot = 3*h//4 + 20
             mask[0:search_top, 0:w] = 0
             mask[search_bot:h, 0:w] = 0
+
+            self.w = w
+            self.h = h
+
             M = cv2.moments(mask)
 
             if M['m00'] > 0:
-                cx = int(M['m10']/M['m00'])
-                cy = int(M['m01']/M['m00'])
-                cv2.circle(cv_image, (cx, cy), 20, (0,0,255), -1)
-
-                ### BEGIN CONTROL
-                err = cx - w/2
-                #------controle P simples--------------------
-            
-                self.twist.linear.x = 0.2
-                self.twist.angular.z = -float(err) / 100
-           
-                #------Controle PD simples----------------- tem que validar 
-                                
-            #    kp = 0.2 # ganho P para tunar
-            #    kd = 0.03 # ganoh D para tunar
-            #    
-            #    proporcional = kp *err
-            #    derivativo = kd*(err - self.lastError)/(1.0/self.herts)
-            #    PD = proporcional + derivativo
-            #    
-            #    self.lastError = err
-            #
-            #    self.twist.linear.x =min(self.max_vel_linear*((1-abs(err)/(w/2))**2), self.max_vel_linear)
-            #    self.twist.angular.z = -max(PD/10, -self.max_vel_angular) if PD/10 < 0 else -min(PD/10, self.max_vel_angular) # anti-windup
-                
-                ### END CONTROL
-
-                #publica velocidade
-                self.cmd_vel_pub.publish(self.twist)
-                rospy.loginfo("linear: %f angular: %f", self.twist.linear.x, self.twist.angular.z)
-                self.rate.sleep()
+                self.cx = int(M['m10']/M['m00'])
+                self.cy = int(M['m01']/M['m00'])
+                cv2.circle(cv_image, (self.cx, self.cy), 20, (0,0,255), -1)
 
             cv2.imshow("window", cv_image)
             cv2.waitKey(1)
         except CvBridgeError as e:
             print('ex', e)
+    
+    def control(self):
+        ### BEGIN CONTROL
+        err = self.cx - self.w/2
+        #------controle P simples--------------------
+    
+        self.twist.linear.x = 0.2
+        self.twist.angular.z = -float(err) / 100
+   
+        ### END CONTROL
+        #publica velocidade
+        self.cmd_vel_pub.publish(self.twist)
+        rospy.loginfo("linear: %f angular: %f", self.twist.linear.x, self.twist.angular.z)
+        self.rate.sleep()
 
-rospy.init_node('follower')
-follower = Follower()
-rospy.spin()
+# Main loop
+if __name__=="__main__":
+    rospy.init_node('follower')
+    follower = Follower()
+
+    while not rospy.is_shutdown():
+        follower.control()
+
 # END ALL
