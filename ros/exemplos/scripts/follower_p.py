@@ -25,6 +25,9 @@ class Follower:
         
         self.bridge = CvBridge()
         self.cv_image = None
+	#topico da camera do robo real
+	#self.image_sub = rospy.Subscriber('/v4l/camera/image_raw/compressed',
+        #topico da camera do robo simulado
         self.image_sub = rospy.Subscriber('/camera/image/compressed',
                                             CompressedImage, 
                                             self.image_callback, 
@@ -62,6 +65,8 @@ class Follower:
         
         try:
             cv_image = self.bridge.compressed_imgmsg_to_cv2(msg,desired_encoding='bgr8')
+	    #cv_image = cv2.flip(cv_image, -1) # Descomente se for robo real
+	
             hsv = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
             lower_yellow = np.array([22, 50, 50],dtype=np.uint8)
             upper_yellow = np.array([36, 255, 255],dtype=np.uint8)
