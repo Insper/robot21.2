@@ -34,12 +34,12 @@ class Follower:
                                             queue_size=4, 
                                             buff_size = 2**24)
         self.cmd_vel_pub = rospy.Publisher('/cmd_vel',
-                                            Twist, 
-                                            queue_size=1)
+                                             Twist, 
+                                             queue_size=1)
         
         self.laser_subscriber = rospy.Subscriber('/scan',
-                                                 LaserScan, 
-			                                    self.laser_callback)
+                                                  LaserScan, 
+	 		                                    self.laser_callback)
         
         self.twist = Twist()
         self.laser_msg = LaserScan()
@@ -49,17 +49,17 @@ class Follower:
         self.h = -1
         self.w = -1
 
-        self.lastError = 0
-        self.max_vel_linear = 0.2
-        self.max_vel_angular = 2.0
+    #     self.lastError = 0
+    #     self.max_vel_linear = 0.2
+    #     self.max_vel_angular = 2.0
         self.hertz = 250
         self.rate = rospy.Rate(self.hertz)
 
     def laser_callback(self, msg):
-        self.laser_msg = msg
+         self.laser_msg = msg
 
-    def get_laser(self, pos):
-        return self.laser_msg.ranges[pos]
+    # def get_laser(self, pos):
+    #     return self.laser_msg.ranges[pos]
     
     def image_callback(self, msg):
         
@@ -68,8 +68,8 @@ class Follower:
 	    #cv_image = cv2.flip(cv_image, -1) # Descomente se for robo real
 	
             hsv = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
-            lower_yellow = np.array([22, 50, 50],dtype=np.uint8)
-            upper_yellow = np.array([36, 255, 255],dtype=np.uint8)
+            lower_yellow = np.array([20, 50, 50],dtype=np.uint8)
+            upper_yellow = np.array([50, 255, 255],dtype=np.uint8)
             mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 
             h, w, d = cv_image.shape
@@ -113,6 +113,6 @@ if __name__=="__main__":
     follower = Follower()
 
     while not rospy.is_shutdown():
-        follower.control()
+      follower.control()
 
 # END ALL
