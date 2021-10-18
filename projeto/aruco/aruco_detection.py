@@ -8,13 +8,13 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        arg = sys.argv[1]
-        try:
-            input_source=int(arg) # se for um device
-        except:
-            input_source=str(arg) # se for nome de arquivo
+       arg = sys.argv[1]
+       try:
+           input_source=int(arg) # se for um device
+       except:
+           input_source=str(arg) # se for nome de arquivo
     else:   
-        input_source = "aruco.mp4"
+       input_source = "aruco.mp4"
 
     print("Baixe o arquivo a seguir para funcionar: ")
     print("https://github.com/Insper/robot202/raw/master/projeto/aruco/aruco.mp4")
@@ -38,19 +38,23 @@ if __name__ == "__main__":
         # parameters.minDistanceToBorder = 0
         # parameters.adaptiveThreshWinSizeMax = 1000
 
-        corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, aruco_dict) #, parameters=parameters)
+        try:
+            corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, aruco_dict) #, parameters=parameters)
 
-        for i in range(len(ids)):
-            print('ID: {}'.format(ids[i]))
-            
-            for c in corners[i]: 
-                for canto in c:
-                    print("Corner {}".format(canto))
+            for i in range(len(ids)):
+                print('ID: {}'.format(ids[i]))
+                
+                for c in corners[i]: 
+                    for canto in c:
+                        print("Corner {}".format(canto))
 
 
 
 
-        aruco.drawDetectedMarkers(frame, corners, ids)
+            aruco.drawDetectedMarkers(frame, corners, ids)
+        
+        except:
+            print("No aruco detected...")
 
 
         cv2.imshow('frame',frame)
