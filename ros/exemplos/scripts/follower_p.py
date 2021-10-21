@@ -25,8 +25,8 @@ class Follower:
         
         self.bridge = CvBridge()
         self.cv_image = None
-	#topico da camera do robo real
-	#self.image_sub = rospy.Subscriber('/v4l/camera/image_raw/compressed',
+	    #topico da camera do robo real
+	    #self.image_sub = rospy.Subscriber('/v4l/camera/image_raw/compressed',
         #topico da camera do robo simulado
         self.image_sub = rospy.Subscriber('/camera/image/compressed',
                                             CompressedImage, 
@@ -49,17 +49,17 @@ class Follower:
         self.h = -1
         self.w = -1
 
-    #     self.lastError = 0
-    #     self.max_vel_linear = 0.2
-    #     self.max_vel_angular = 2.0
+#     #     self.lastError = 0
+#     #     self.max_vel_linear = 0.2
+#     #     self.max_vel_angular = 2.0
         self.hertz = 250
         self.rate = rospy.Rate(self.hertz)
 
     def laser_callback(self, msg):
          self.laser_msg = msg
 
-    # def get_laser(self, pos):
-    #     return self.laser_msg.ranges[pos]
+#     # def get_laser(self, pos):
+#     #     return self.laser_msg.ranges[pos]
     
     def image_callback(self, msg):
         
@@ -113,6 +113,6 @@ if __name__=="__main__":
     follower = Follower()
 
     while not rospy.is_shutdown():
-      follower.control()
+        follower.control()
 
 # END ALL
