@@ -15,6 +15,17 @@ Su Mo Tu We Th Fr Sa
 
 ```
 
+# Iniciando o projeto
+
+Todos os integrantes do seu grupo deverão aceitar a tarefa no Github classroom que se encontra neste link:
+
+
+Para criar a pasta do projeto, siga as instruções em:
+https://github.com/Insper/robot21.2/blob/main/guides/projeto_rospython.md
+
+Em especial atenção ao nome da pasta do reposório do projeto, como está especificado em:
+https://github.com/Insper/robot21.2/blob/main/guides/projeto_rospython.md#usando-o-github-classroom
+
 
 # Rubricas
 
