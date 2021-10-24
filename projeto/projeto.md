@@ -179,7 +179,7 @@ Como atividade inicial, sugiro que tente fazer o robô *seguir a pista* . Você 
 # Exemplo do ARUCO 
 
 Exemplo de como interpretar os markers ARUCO 
-[aruco/aruco.ipynb] (aruco/aruco.ipynb)
+[./aruco/aruco.ipynb] (./aruco/aruco.ipynb)
 
 Exemplo de como programar usando os markers ARUCO em 3D 
 [https://github.com/Insper/robot21.2/blob/master/ros/exemplos/scripts/aruco.py](https://github.com/Insper/robot21.2/blob/master/ros/exemplos/scripts/aruco.py)
