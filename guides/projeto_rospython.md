@@ -35,6 +35,10 @@ Vamos criar um diretório para os programas Python:
     mkdir scripts
     cd scripts
 
+## Primeiro exemplo
+
+### Criando um script
+
 Vamos criar nosso primeiro script (vazio inicialmente)
 
     touch roda.py
@@ -50,7 +54,7 @@ Em seguida vamos editá-lo.
 Dentro do editor cole o seguinte código para o `roda.py:
 
 ```python
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 import rospy
@@ -109,7 +113,7 @@ Vamos editar:
 Digite o código abaixo:
 
 ```python
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 
@@ -125,8 +129,6 @@ def scaneou(dado):
 	print(np.array(dado.ranges).round(decimals=2))
 	#print("Intensities")
 	#print(np.array(dado.intensities).round(decimals=2))
-
-	
 
 
 if __name__=="__main__":
@@ -157,13 +159,14 @@ Para conseguir executar, abra **um novo terminal** e digite:
 
 
 
-
-
 **Atenção** se você tiver Anaconda em seu Linux, pode ser que tenha vários *python3* e o *ROS* e *OpenCV* estejam instalados somente em alguns deles. A sugestão é não usar Anaconda no Linux.
 
+## Usando o Github Classroom
 
+O repositório do projeto da discplina está inicialmente vazio. A ideia é que algum integrante do grupo clone o repositório dentro de `~/catkin_ws/src` e então crie o projeto ali dentro e depois execute o `catkin_make`.
 
+No entanto, o `catkin_make` tem problemas para resolver nomes de diretórios com hífens, como `projeto-robot...`. Por isso, você deverá alterar o nome da pasta do repositório logo após clonar.
+O novo nome de pasta não poderá conter hídens.
 
-
-
+Não se preocupe, pois o nome do diretório raiz do projeto não tem a menor importância para o Git, apenas os arquivos e sub-diretórios internos ao mesmo.
 

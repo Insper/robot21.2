@@ -1,19 +1,32 @@
 
 # Projeto 1
 
-Deadline 24/05
+Novo deadline 19/11
 
 
 ```
       Nov 2021        
 Su Mo Tu We Th Fr Sa  
-    1  2  3  4 *5* 6  
+    1  2  3  4 5 6  
  7  8  9 10 11 12 13  
-14 15 16 17 18 19 20  
+14 15 16 17 18 *19* 20  
 21 22 23 24 25 26 27  
 28 29 30
 
 ```
+
+# Iniciando o projeto
+
+Todos os integrantes do seu grupo deverão aceitar a tarefa no Github classroom que se encontra neste link:
+https://classroom.github.com/a/KHtHUd-S
+
+
+Para criar a pasta do projeto, siga as instruções em:
+https://github.com/Insper/robot21.2/blob/main/guides/projeto_rospython.md
+
+
+Em especial atenção ao nome da pasta do reposório do projeto, como está especificado em:
+https://github.com/Insper/robot21.2/blob/main/guides/projeto_rospython.md#usando-o-github-classroom
 
 
 # Rubricas
@@ -72,9 +85,10 @@ Itens do conceito B+ um uso de classes e objetos Python
 Só pode ter sleep dentro do `while` principal. 
 
 Fazer um dentre os cinco *especiais*:
+* Uso de classes e objetos Python em todos os arquivos criados para o projeto
 * Gravar e filmar no robô real funcionado
 * Fazer um controle proporcional derivativo ou PD para manter o robô na pista e fazer funcionar rápido baseado no ângulo de visão da pista.
-* Mapear os Arucos usando o modo 3D e mapeamento ( https://github.com/Insper/404/blob/master/tutoriais/robotica/navigation_gazebo_simulador.md)
+* Mapear os Arucos usando o modo 3D e mapeamento (https://github.com/Insper/404/blob/master/tutoriais/robotica/navigation_gazebo_simulador.md)
 * Estruturar o programa com pelo menos um node ROS prestando serviço para o outro.
 
 Para saber como implementar controle proporcional derivativo ou PD se inspire [neste link](https://www.a1k0n.net/2018/11/13/fast-line-following.html)
@@ -84,6 +98,9 @@ Para saber como implementar controle proporcional derivativo ou PD se inspire [n
 
 Itens do conceito A e fazer 3 especiais em vez de apenas um.
 
+**Conceito A+ para grupos de 4**
+
+Itens do conceito A e fazer todso os 5 especiais
 
 ## Grupos de 4 pessoas 
 
@@ -161,8 +178,10 @@ Como atividade inicial, sugiro que tente fazer o robô *seguir a pista* . Você 
 
 # Exemplo do ARUCO 
 
-Exemplo de como programar usando os markers ARUCO 
+Exemplo de como interpretar os markers ARUCO 
+[./aruco/aruco.ipynb] (./aruco/aruco.ipynb)
 
+Exemplo de como programar usando os markers ARUCO em 3D 
 [https://github.com/Insper/robot21.2/blob/master/ros/exemplos/scripts/aruco.py](https://github.com/Insper/robot21.2/blob/master/ros/exemplos/scripts/aruco.py)
 
 # Instruções sobre os tópicos da garra 

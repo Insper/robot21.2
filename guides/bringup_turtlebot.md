@@ -29,7 +29,7 @@ Verifique se as linhas `IPBerry` , `ROS_MASTER_URI`  e `ROS_IP` são semelhantes
 
 export IPBerry=192.168.0.150
 export ROS_MASTER_URI="http://"$IPBerry":11311"
-export ROS_IP=`hostname -I`
+export ROS_IP=`hostname -I |awk '{print $1}'`
 
 
 ```
@@ -65,15 +65,7 @@ Para ver a imagem da câmera:
 
 Abra um novo terminal e digite o comando:
 
-	roslaunch gscam raspicam.launch
-
-Em um novo terminal rode o comando:
-
 	rqt_image_view
-
-Sempre que a câmera estiver invertida, rode para ajustá-la:
-
-	rosrun rqt_reconfigure rqt_reconfigure
 
 
 ## Controle remoto
@@ -84,9 +76,9 @@ Para comandar o robô usando as teclas faça:
 	roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
 
-## No robô novamente, para desligar
+## Para parar o robô, copie e cole o seguinte comando no terminal:
 
-Aperte o botão para baixo até o laser para de desligar.
+	rostopic pub -1 /cmd_vel geometry_msgs/Twist -- '[0.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
 
 
 Referência: [Manual do Bringup do Turtlebot3 - documentação oficial](http://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup)
@@ -109,7 +101,7 @@ O print acima permite ver que a variável `ROS_IP` contém muito mais que um ún
 Para consertar precisamos editar o `.bashrc`  e consertar a`variável manualmente. Ficará:
 
 ```bash
-#export ROS_IP=`hostname -I`
+#export ROS_IP=`hostname -I |awk '{print $1}'`
 export ROS_IP=192.168.0.142
 ```
 Após este conserto, feche os terminais e tente novamente
