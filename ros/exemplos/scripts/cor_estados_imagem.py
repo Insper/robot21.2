@@ -12,6 +12,7 @@ import cv2
 from geometry_msgs.msg import Twist, Vector3, Pose
 from nav_msgs.msg import Odometry
 from sensor_msgs.msg import Image, CompressedImage, LaserScan
+from std_msgs.msg import Float64
 from cv_bridge import CvBridge, CvBridgeError
 import cormodule
 
@@ -49,6 +50,10 @@ def roda_todo_frame(imagem):
         cv_image = bridge.compressed_imgmsg_to_cv2(imagem, "bgr8")
         # cv_image = cv2.flip(cv_image, -1) # Descomente se for robo real
         media, centro, maior_area =  cormodule.identifica_cor(cv_image)
+
+        # publicamos a informacao processada
+        publicador.publish(Float64(media[0] - centro[0]))
+
         depois = rospy.Time.now()
         cv2.imshow("Camera", cv_image)
     except CvBridgeError as e:
@@ -68,59 +73,11 @@ def recebe_scan(msg):
     max_laser = msg.range_max
 
 
-class MaquinaEstado:
-
-    def __init__(self):
-
-        self.velocidade_saida = rospy.Publisher("/cmd_vel", Twist, queue_size = 1)
-        self.estado = "PROCURA AZUL"
-
-    def controle_procura_azul(self):
-        vel = Twist(Vector3(0,0,0), Vector3(0,0,0))
-
-        if len(media) != 0 and len(centro) != 0:
-            print("Média dos vermelhos: {0}, {1}".format(media[0], media[1]))
-            print("Centro dos vermelhos: {0}, {1}".format(centro[0], centro[1]))
-
-            if (media[0] > centro[0]):
-                vel = Twist(Vector3(0,0,0), Vector3(0,0,-0.1))
-            if (media[0] < centro[0]):
-                vel = Twist(Vector3(0,0,0), Vector3(0,0,0.1))
-            
-            self.velocidade_saida.publish(vel)
-
-            if  centro[0] - 10 < media[0] < centro[0] + 10:
-                return "AVANCA AZUL"
-            
-        return "PROCURA AZUL"
-
-    def controle_avanca_azul(self):
-        
-        vel = Twist(Vector3(0.5,0,0), Vector3(0,0,0))
-
-        if  media[0] < centro[0] - 10 or media[0] > centro[0] + 10:
-            vel = Twist(Vector3(0.0,0,0), Vector3(0,0,0))
-            self.velocidade_saida.publish(vel)
-            return "PROCURA AZUL"
-
-        if  dados_laser[0] < .3:
-            vel = Twist(Vector3(0.0,0,0), Vector3(0,0,0))
-
-        self.velocidade_saida.publish(vel)
-
-        return "AVANCA AZUL"
-
-
-    def processa_dados(self):
-
-        if self.estado == "PROCURA AZUL":
-            self.estado = self.controle_procura_azul()
-        elif self.estado == "AVANCA AZUL":
-            self.estado = self.controle_avanca_azul()
-
 
 if __name__=="__main__":
-    rospy.init_node("cor")
+    rospy.init_node("cor_imagem")
+
+    publicador = rospy.Publisher("/erro_centro", Float64, queue_size = 1)
 
     # topico_imagem = "/kamera"
     topico_imagem = "camera/image/compressed" # Use para robo virtual
@@ -148,15 +105,9 @@ if __name__=="__main__":
     recebedor = rospy.Subscriber(topico_imagem, CompressedImage, roda_todo_frame, queue_size=4, buff_size = 2**24)
     print("Usando ", topico_imagem)
 
-    recebedor_laser = rospy.Subscriber("/scan", LaserScan, recebe_scan)
-
-    maquina_estados = MaquinaEstado()
-
     try:
 
         while not rospy.is_shutdown():
-            maquina_estados.processa_dados()
-            
             rospy.sleep(0.1)
 
     except rospy.ROSInterruptException:
