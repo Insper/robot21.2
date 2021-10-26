@@ -28,17 +28,17 @@ def identifica_cor(frame):
     # frame = cv2.flip(frame, -1) # flip 0: eixo x, 1: eixo y, -1: 2 eixos
     frame_hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    cor_menor = np.array([20, 50, 100])
-    cor_maior = np.array([50, 255, 255])
+    cor_menor = np.array([170//2, 50, 100])
+    cor_maior = np.array([190//2, 255, 255])
     segmentado_cor = cv2.inRange(frame_hsv, cor_menor, cor_maior)
 
-    # cor_menor = np.array([174, 50, 100])
-    # cor_maior = np.array([180, 255, 255])
+    #cor_menor = np.array([174, 50, 100])
+    #cor_maior = np.array([180, 255, 255])
 
     # # NOTA: so' precisamos de 2 ranges porque o vermelho da' 
     # # a volta do 360 para o zero.
     # # Para qualquer outra cor apenas um inRange resolve
-    # segmentado_cor += cv2.inRange(frame_hsv, cor_menor, cor_maior)
+    #segmentado_cor += cv2.inRange(frame_hsv, cor_menor, cor_maior)
 
     # Note que a notacão do numpy encara as imagens como matriz, portanto o enderecamento é
     # linha, coluna ou (y,x)
