@@ -67,6 +67,8 @@ APS 4 - TBD
 
 [Parar o robô via terminal](./guides/parar_robo.md)
 
+[Ros Bag](./guides/rosbag.md)
+
 
 ## SSD de Robótica
 

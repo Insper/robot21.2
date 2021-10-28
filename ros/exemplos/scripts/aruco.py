@@ -23,7 +23,7 @@ marker_size  = 20 #- [cm]
 
 
 #--- Get the camera calibration path
-calib_path  = "/home/borg/catkin_ws/src/robot202/ros/exemplos202/scripts/"
+calib_path  = "/home/borg/catkin_ws/src/robot21.2/ros/exemplos/scripts/"
 camera_matrix   = np.loadtxt(calib_path+'cameraMatrix_raspi.txt', delimiter=',')
 camera_distortion   = np.loadtxt(calib_path+'cameraDistortion_raspi.txt', delimiter=',')
 
@@ -80,9 +80,9 @@ def roda_todo_frame(imagem):
 
 			##############----- Referencia dos Eixos------###########################
 			# Linha referencia em X
-			cv2.line(cv_image, (cv_image.shape[1]/2,cv_image.shape[0]/2), ((cv_image.shape[1]/2 + 50),(cv_image.shape[0]/2)), (0,0,255), 5) 
+			cv2.line(cv_image, (cv_image.shape[1]//2,cv_image.shape[0]//2), ((cv_image.shape[1]//2 + 50),(cv_image.shape[0]//2)), (0,0,255), 5) 
 			# Linha referencia em Y
-			cv2.line(cv_image, (cv_image.shape[1]/2,cv_image.shape[0]/2), (cv_image.shape[1]/2,(cv_image.shape[0]/2 + 50)), (0,255,0), 5) 	
+			cv2.line(cv_image, (cv_image.shape[1]//2,cv_image.shape[0]//2), (cv_image.shape[1]//2,(cv_image.shape[0]//2 + 50)), (0,255,0), 5) 	
 			
 			#####################---- Distancia Euclidiana ----#####################
 			# Calcula a distancia usando apenas a matriz tvec, matriz de tanslação
