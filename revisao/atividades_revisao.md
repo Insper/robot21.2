@@ -6,6 +6,10 @@ Lembre-se de que também existem [as provas e simulados anteriores](./lista_prov
 
 # 1. Simulação da prova 
 
+[Código do segundo simulado da prova](https://github.com/insper-classroom/212_robot_sim2)
+
+[Gabarito do segundo simulado](https://github.com/insper-classroom/212_robot_sim2/tree/gabarito)
+
 [Código do simulado da prova](https://github.com/insper-classroom/212_robot_sim)
 
 [Gabarito do simulado](https://github.com/Insper-classroom/212_robot_sim/tree/gabarito)
