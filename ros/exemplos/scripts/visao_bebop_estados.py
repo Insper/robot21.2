@@ -17,9 +17,9 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 bridge = CvBridge()
 
-camera_topic = "/bebop2/camera_base/image_raw"
+#camera_topic = "/bebop2/camera_base/image_raw"
 # Descomente a linha abaixo para o bebop real
-# camera_topic = "/bebop/image_raw"
+camera_topic = "/bebop/image_raw"
 
 magentaLower =(120, 90, 50)
 magentaUpper = (180, 255, 255)

@@ -4,7 +4,11 @@
 Lembre-se de que também existem [as provas e simulados anteriores](./lista_provas_anteriores.md).
 
 
-# 1. Simulação da prova 
+# 1. Simulado da prova 
+
+[Código do terceiro simulado da prova](https://github.com/insper-classroom/212_robot_sim3)
+
+[Gabarito do terceiro simulado (questão 3 apenas, por enquanto)](https://github.com/insper-classroom/212_robot_sim3/tree/gabarito)
 
 [Código do segundo simulado da prova](https://github.com/insper-classroom/212_robot_sim2)
 
